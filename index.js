@@ -39,7 +39,7 @@ const userPrompts = () => inquirer.prompt([
         type: "list",
         name: "license",
         message: "Select a license.",
-        choices:["GNU GPL v3","The MIT License","Mozilla Public Licence 2.0"]
+        choices:["GNU_GPL_v3_License","MIT_License","Mozilla_Public_Licence_2.0", "Apache_2.0_Licence", "IBM_Public_Licence_Version_1.0"]
     },
     {
         type: "input",
@@ -52,9 +52,12 @@ const userPrompts = () => inquirer.prompt([
         message: "What is your email address?",
     },
 ])
+
 const generateMarkdown = (responses) => 
 
 `# ${responses.projectName}
+
+![GitHub license](https://img.shields.io/badge/license-${responses.license}-blue.svg)
 
 ## Table of Contents
  1. [Description](#description)
@@ -76,9 +79,9 @@ const generateMarkdown = (responses) =>
 ## Tests
 ### ${responses.test}
 ## License
-### ${responses.license}
+### Distributed under the ${responses.license}
 ## Questions
-### Email: [${responses.email}](${responses.email})
+### Email: ${responses.email}
 ### Github: [https://github.com/${responses.github}](https://github.com/${responses.github})`;
 
 userPrompts().then((responses) => asyncWriteFile('readme.md', generateMarkdown(responses)))
