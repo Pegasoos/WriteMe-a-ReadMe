@@ -27,7 +27,7 @@ const userPrompts = () => inquirer.prompt([
     },
     {
         type: "input",
-        name: "guidelines",
+        name: "contributing",
         message: "Add some guidelines for contributing to the project.",
     },
     {
@@ -52,4 +52,35 @@ const userPrompts = () => inquirer.prompt([
         message: "What is your email address?",
     },
 ])
-userPrompts()
+const generateMarkdown = (responses) => 
+
+`# ${responses.projectName}
+
+## Table of Contents
+ 1. [Description](#description)
+ 2. [Installation](#installation)
+ 3. [Usage](#usage)
+ 4. [Contributing](#contributing)
+ 5. [Tests](#tests)
+ 6. [License](#license)
+ 7. [Questions](#questions)
+
+## Description
+### ${responses.description}
+## Installation
+### ${responses.installation}
+## Usage
+### ${responses.usage}
+## Contributing
+### ${responses.contributing}
+## Tests
+### ${responses.test}
+## License
+### ${responses.license}
+## Questions
+### Email: [${responses.email}](${responses.email})
+### Github: [https://github.com/${responses.github}](https://github.com/${responses.github})`;
+
+userPrompts().then((responses) => asyncWriteFile('readme.md', generateMarkdown(responses)))
+.then(() => console.log("Success!"))
+.catch((err) => console.error(err));
