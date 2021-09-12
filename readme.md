@@ -22,9 +22,9 @@
 ### 2.Clone the project to your own machine
 ### 3.Commit changes to your own branch
 ### 4.Push your work back up to your fork
-### 5.Submit a Pull request so that we can review your changes
+### 5.Submit a pull request so that we can review your changes
 ## Tests
-### 
+### Follow usage nstructions for the environment you wish test in.
 ## License
 ### Distributed under the Mozilla_Public_Licence_2.0
 ## Questions
