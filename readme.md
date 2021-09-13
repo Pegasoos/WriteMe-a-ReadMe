@@ -16,7 +16,7 @@
 ## Installation
 ### Install the files from the Github Repository, then initialize an npm repository in the same directory as index.js and install inquirer, utils, and fs.
 ## Usage
-### The application is from terminal. Navigate to its directory and enter "node index.js" to run the application.
+### The application is ran from terminal. Navigate to its directory and enter "node index.js" to run the application.
 ## Contributing
 ### 1.Fork the repo on GitHub
 ### 2.Clone the project to your own machine
