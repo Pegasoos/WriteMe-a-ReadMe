@@ -13,6 +13,7 @@
 
 ## Description
 ### This is a CLI application designed to take generate a readme.md file based on user input.
+[![Readme Generator](https://res.cloudinary.com/marcomontalbano/image/upload/v1631987541/video_to_markdown/images/youtube--_mHJf9Itw_U-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/_mHJf9Itw_U "Readme Generator")
 ## Installation
 ### Install the files from the Github Repository, then initialize an npm repository in the same directory as index.js and install inquirer, utils, and fs.
 ## Usage
